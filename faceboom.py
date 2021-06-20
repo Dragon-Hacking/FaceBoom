@@ -236,7 +236,9 @@ def Main():
                 sys.exit(1)
 
         faceboom.banner(target,wordlist,single_passwd)
-        loop,passwords = (1,open(wordlist).readlines()) if not single_passwd else ("~",[single_passwd])
+        loop = 1 if not single_passwd else "~"
+        with open(wordlist, 'r', errors='replace') as f:
+                 passwords = f.readlines()
         for passwd in passwords:
                 passwd = passwd.strip()
                 if len(passwd) <6:continue
