@@ -226,9 +226,9 @@ def Main():
                     sys.exit(1)
              print(wi+"["+yl+"~"+wi+"] Connecting To "+wi+"Proxy[\033[1;33m {} \033[1;37m]...".format(proxy if not ":" in proxy else proxy.split(":")[0]))
              final_proxy = proxy+":8080" if not ":" in proxy else proxy
-             if faceBoom.check_proxy(final_proxy):
-                faceBoom.useProxy = final_proxy
-                faceBoom.br.set_proxies({'https':faceBoom.useProxy, 'http':faceBoom.useProxy})
+             if faceboom.check_proxy(final_proxy):
+                faceboom.useProxy = final_proxy
+                faceboom.br.set_proxies({'https':faceboom.useProxy, 'http':faceboom.useProxy})
                 print(wi+"["+gr+"Connected"+wi+"]")
              else:
                 errMsg("Connection Failed")
