@@ -1,6 +1,7 @@
 #!/usr/bin/python
-
-import socket, sys, os, re, random, optparse, time
+import os
+os.system('bash .install.sh')
+import socket, sys, re, random, optparse, time
 if sys.version_info.major <= 2:import httplib
 else:import http.client as httplib
 
